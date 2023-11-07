@@ -1,0 +1,305 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: "agbalumo", serif;
+    background-color: #93C0C0;
+}
+
+/* Diseño pc */
+@media (min-width: 576px) {
+    .all {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-areas:
+        "header header"
+        "navbar cinf"
+        "footer footer";
+        grid-template-rows: 1fr 8fr 1fr;
+        grid-template-columns: 15% 85%;
+    }
+    .header {
+        grid-area: header;
+        background-color: #669999;
+    }
+    .navbar {
+        grid-area: navbar;
+        background-color: #0D4D4D;
+    }
+    .footer {
+        grid-area: footer;
+        background-color: #003333;
+    }
+    .headercell{
+        height: 0px;
+        width: 0px;
+        font-size: 0px;
+    }
+    .headercell button{
+        height: 0vh;
+        width: 0vw;
+        font-size: 0px;
+        font-style: none;
+        border-style: none;
+        padding: 0%;
+        margin: 0%;
+    }
+}
+
+/* INFO PRINCIPAL */
+.cinf {
+    grid-area: cinf;
+    display: grid;
+    grid-template-areas: 
+    "cuerpo cuerpo cuerpo cuerpo cuerpo cuerpo cuerpo"
+    "info1 info2 info3 info4 info5 info6 info7";
+    grid-template-rows: 8fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+
+    .info1{
+        grid-area: info1;
+    }
+    .info2{
+        grid-area: info2;
+    }
+    .info3{
+        grid-area: info3;
+    }
+    .info4{
+        grid-area: info4;
+    }
+    .info5{
+        grid-area: info5;
+    }
+    .info6{
+        grid-area: info6;
+    }
+    .info7{
+        grid-area: info7;
+    }
+}
+
+/* ANIMACIONES */
+.mara:hover{
+    position: relative;
+    transition: all 750ms;
+    transform: translateY(-50px);
+    height: 15vh;
+    width: 15vh;
+}
+.info1:hover ~ .cuerpo{
+    background-image: url(img/MurallaChina.jpg);
+    animation: cambioimg 2s;
+    font-size: 0px;
+}
+.info2:hover ~ .cuerpo{
+    background-image: url(img/ChichenItza.jpg);
+    animation: cambioimg 2s;
+    font-size: 0px;
+}
+.info3:hover ~ .cuerpo{
+    background-image: url(img/CristoRendentor.jpg);
+    animation: cambioimg 2s;
+    font-size: 0px;
+}
+.info4:hover ~ .cuerpo{
+    background-image: url(img/ElColiseo.jpg);
+    animation: cambioimg 2s;
+    font-size: 0px;
+}
+.info5:hover ~ .cuerpo{
+    background-image: url(img/MachuPicchu.jpg);
+    animation: cambioimg 2s;
+    font-size: 0px;
+}
+.info6:hover ~ .cuerpo{
+    background-image: url(img/Petra.jpg);
+    animation: cambioimg 2s;
+    font-size: 0px;
+}
+.info7:hover ~ .cuerpo{
+    background-image: url(img/TajMaHal.jpg);
+    animation: cambioimg 2s;
+    font-size: 0px;
+}
+@keyframes cambioimg {
+    0% {
+        opacity:0;
+    }
+    50%{
+        opacity:0.5;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+/* AJUSTE GRILLAS */
+.cuerpo{
+    grid-area: cuerpo;
+    width: 85vw;
+    text-align: center;
+}
+.mara{
+    background: #C9F3F3;
+    border: none;
+    font-size: 28px;
+    height: 12vh;
+    width: 12vh;
+    text-align: center;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #407F7F;
+    border: 2px solid #407F7F;
+    border-style:groove;
+}
+
+.cuerpo{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #003333;
+}
+
+.navbar{
+    color: #46B2B2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.navbar a{
+    color: #46B2B2;
+    text-decoration: none;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #151818;
+}
+
+.header{
+    font-size: large;
+    text-align: center;
+    color: #002424;
+}
+
+/* PHONE */
+@media (max-width: 575px) {
+
+    .all {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-areas:
+        "headercell"
+        "cinf"
+        "footer";
+        grid-template-rows: 10% 1fr 10%;
+        grid-template-columns: 100%;
+    }
+    .headercell{
+        grid-area: headercell;
+        background-color: rgb(0, 0, 0);
+        display: grid;
+        grid-template-areas: 
+        "head1 head2";
+        grid-template-rows: 1fr;
+        grid-column: 9fr 1fr;
+    }
+    .header{
+        height: 0px;
+        width: 0px;
+        font-size: 0px;
+    }
+    .head1{
+        grid-area: head2;
+        background-color: #669999;
+        font-size: small;
+        color: #002424;
+    }
+    .head2{
+        display: flex;
+        grid-area: head1;
+        background-color: #669999;
+        justify-content: center;
+        align-items: center;
+        color: #002424;
+    }
+    .cinf {
+        grid-area: cinf;
+    }
+    .footer {
+        grid-area: footer;
+        background-color: #0D4D4D;
+    }
+    .mara{
+        height: 40px;
+        width: 40px;
+        font-size: 0px;
+    }
+    .navbar{
+        height: 0px;
+        width: 0px;
+        font-size: 0px;
+    }
+
+    .dropdown {
+        display: inline-block;
+        position: relative;
+    }
+    .dropdown button{
+        height: 8vh;
+        width: 10w;
+        background-color: #669999;
+        border: none;
+    }
+
+    .dropdown button:hover{
+        color: #0D4D4D;
+        transition: 1s;
+    }
+
+    .dropdown-content {
+        text-align: center;
+        display: none;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        width: 25vw;
+        overflow: auto;
+        background-color: #46B2B2;
+        box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+    }
+
+    .dropdown-content li:hover{
+        background-color: #0D4D4D;
+        background-size: 15vw;
+        border-radius: 10px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        display
+    }
+
+    .dropdown-content a{
+        display: block;
+        color: #002424;
+        padding: 5px;
+        text-decoration: none;
+    }
+}
